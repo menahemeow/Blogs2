@@ -14,20 +14,20 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        initliazeViews();
+
+        initializeViews();
     }
 
+    @Override
+    protected void initializeViews() {
+        btnAdd = findViewById(R.id. btnAdd);
 
-    private void initliazeViews() {
-        btnAddPost = findViewById(R.id. btnAddPost);
 
         setListeners();
-
     }
 
-    protected void setListeners() {
-        // Add listener to btnAddPost
+    @Override
+    protected  void setListeners(){
+        btnAdd.callOnClick();
     }
-
 }
